@@ -1,0 +1,30 @@
+<div style="background-color: lavender">
+
+  <div class="bar bar-header">
+    <div class="h1 title">TODO APP</div>
+    <button class="button button-clear button-positive" ng-click="main.logout()">logout</button>
+  </div>
+
+<div class="list" style="margin-top: 50px">
+  <h3 style="text-align: center">Add TODO</h3>
+  <label class="item item-input">
+    <input type="text" placeholder="Item Name" ng-model="main.itemName">
+  </label>
+  <label class="item item-input">
+    <textarea placeholder="Description" ng-model="main.itemDesp"></textarea>
+  </label>
+</div>
+<button ng-click="main.addTodo()" class="button button-dark">
+  Add
+</button>
+
+<h3 style="text-align: center">All TODOS</h3>
+<ul class="list" ng-repeat="todo in main.todos">
+  <li class="item">
+    <h4>Item Name:</h4> {{todo.itemName}} <span style="float: right" ng-click="main.itemDelete($index)">delete item</span>
+  </li>
+  <li class="item">
+    <h4>Item Description:</h4> {{todo.itemDesp}} <span style="float: right" ng-click="main.updateDelete($index)">update item</span>
+  </li>
+</ul>
+</div>

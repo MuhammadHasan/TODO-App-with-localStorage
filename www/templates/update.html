@@ -1,0 +1,21 @@
+<div style="background-color: lavender">
+
+  <div class="bar bar-header">
+    <button class="button button-icon icon ion-chevron-left" ui-sref="main"></button>
+    <div class="h1 title">TODO APP</div>
+    <button class="button button-clear button-positive" ng-click="main.logout()">logout</button>
+  </div>
+
+<div class="list" style="margin-top: 50px">
+  <h3 style="text-align: center">Update TODO</h3>
+  <label class="item item-input">
+    <input type="text" placeholder="Item Name" ng-model="update.update_Data.itemName">
+  </label>
+  <label class="item item-input">
+    <textarea placeholder="Description" ng-model="update.update_Data.itemDesp"></textarea>
+  </label>
+</div>
+<button ng-click="update.updateTodo(update.update_Data.itemName,update.update_Data.itemDesp)" class="button button-dark">
+  update
+</button>
+</div>
